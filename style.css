@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap');
+:root{--color-rosa:#E6A4B4;--color-dorado-claro:#F3D0B7;--color-fondo:#FFF8F6;--color-texto-principal:#383838;--color-texto-secundario:#5c3c41;}
+body{font-family:'Montserrat',sans-serif;margin:0;padding:20px;background-color:var(--color-fondo);color:var(--color-texto-principal);display:flex;flex-direction:column;align-items:center;}
+.controls{display:flex;gap:10px;margin-bottom:20px;background-color:#fff;padding:10px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.05);}
+.controls button{padding:10px 20px;font-size:14px;font-weight:600;font-family:'Montserrat',sans-serif;border:2px solid var(--color-dorado-claro);background-color:transparent;color:var(--color-texto-secundario);border-radius:8px;cursor:pointer;transition:all .3s ease;}
+.controls button.active{background-color:var(--color-rosa);color:#fff;border-color:var(--color-rosa);}
+#capture-area{max-width:800px;width:100%;background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.08);padding:30px;box-sizing:border-box;border:1px solid #f0e2e2; overflow: hidden;}
+header{text-align:center;margin-bottom:25px;}
+.logo{max-width:180px;border-radius:50%;box-shadow:0 4px 15px rgba(189,147,147,0.3);}
+main{display:flex;flex-direction:column;gap:25px;}
+.hidden{display:none;}
+
+/* --- Secciones Generales Animadas --- */
+.flyer-title {font-family:'Dancing Script',cursive;font-size:2.8em;text-align:center;color:var(--color-texto-secundario);margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid var(--color-dorado-claro);}
+.card{background-color:#fff;border-radius:15px;padding:25px;}
+.card h2{font-family:'Dancing Script',cursive;font-size:2.5em;margin-top:0;margin-bottom:20px;color:var(--color-rosa);text-align:center;}
+.card ul{list-style:none;padding-left:0;margin:0;}
+.card ul li{padding:10px 0 10px 30px;position:relative;border-bottom:1px dashed #f0e2e2;}
+.card ul li:last-child{border-bottom:none;}
+.card ul li::before{content:'✨';position:absolute;left:0;top:10px;color:var(--color-dorado-claro);font-size:1.2em;}
+.contact{font-weight:600;text-align:center;margin-top:20px;}
+.contact a{color:var(--color-rosa);text-decoration:none;font-weight:600;border-bottom:2px solid var(--color-dorado-claro);padding-bottom:2px;}
+.highlight{background:linear-gradient(135deg,var(--color-dorado-claro),#fde8d7);text-align:center; position: relative; overflow: hidden;}
+.highlight h2{color:var(--color-texto-secundario);}
+.giveaway{background-color:#fdeff2;border:2px dashed var(--color-rosa);}
+.prizes{display:flex;gap:20px;justify-content:center;margin-top:15px;flex-wrap: wrap;}
+.prize{text-align:center;background-color:#fff;padding:20px;border-radius:10px;flex:1;border:1px solid #f0e2e2;min-width: 180px;}
+.prize h3{margin:0 0 10px 0;color:var(--color-rosa);font-weight:600;}
+.raffle-note{text-align:center;font-weight:600;margin-top:20px;color:var(--color-texto-secundario);font-style:italic;}
+.separator {width: 80%; margin: 0 auto 20px auto; border-bottom: 2px solid var(--color-dorado-claro);}
+.number-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(45px,1fr));gap:8px;margin-top:15px;}
+.number-box {border:1px solid #f0e2e2;background-color:#fcf8f7;border-radius:8px;padding:10px 5px;text-align:center;font-weight:600;font-size:1.1em;color:var(--color-texto-secundario);}
+footer{text-align:center;margin-top:30px;padding-top:20px;border-top:1px dashed #f0e2e2;}
+footer p{margin:5px 0;}
+footer .social{font-family:'Dancing Script',cursive;font-size:2em;color:var(--color-rosa);}
+#download-btn{display:block;width:100%;max-width:400px;margin:25px auto 0;padding:18px 30px;font-size:18px;font-weight:600;font-family:'Montserrat',sans-serif;color:#fff;background:linear-gradient(45deg,#e91e63,var(--color-rosa));border:none;border-radius:12px;cursor:pointer;transition:all .3s ease;box-shadow:0 5px 15px rgba(233,30,99,0.3);}
+#download-btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(233,30,99,0.4);}
+#download-btn:disabled {background: #aaa; cursor: not-allowed;}
+
+/* --- ¡NUEVAS ANIMACIONES! --- */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes sparkle {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+/* Aplicamos las animaciones */
+.animated {
+    animation: popIn 0.8s ease-out forwards;
+}
+
+.logo.animated {
+    animation: popIn 0.8s ease-out 0.2s forwards; /* El logo aparece un poco después */
+}
+
+/* Animación de destellos para el ícono de las listas */
+.card ul li::before {
+    animation: sparkle 2.5s infinite ease-in-out;
+}
+
+/* Efecto de luz que cruza la tarjeta de "Cositas Dulces" */
+.highlight::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    transform: rotate(45deg);
+    animation: lightSweep 4s infinite linear;
+}
+@keyframes lightSweep {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
