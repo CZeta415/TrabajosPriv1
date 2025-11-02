@@ -18,7 +18,8 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 2rem 0;
-            color: #333;
+            /* 💡 Cambiamos el color de texto base a negro oscuro */
+            color: #111; 
             text-align: center;
             
             /* ✅ Fondo restaurado al estilo original */
@@ -67,24 +68,22 @@
             border-radius: 10px;
         }
         
-        /* --- ✅ AQUÍ ESTÁ EL ARREGLO --- */
         .featured-image-container {
             position: relative;
             width: 100%;
-            height: 400px; /* Se restaura la altura fija */
+            height: 400px; 
             margin-bottom: 2.5rem;
-            border-radius: 8px; /* Se restaura el borde redondeado */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Se restaura la sombra */
+            border-radius: 8px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
         }
 
         .featured-image {
             width: 100%;
-            height: 100%; /* La imagen ocupa el 100% del contenedor */
-            object-fit: cover; /* La imagen cubre el espacio sin deformarse */
+            height: 100%; 
+            object-fit: cover; 
             border-radius: 8px;
             display: block;
         }
-        /* --- FIN DEL ARREGLO --- */
 
         .copa-superpuesta {
             position: absolute;
@@ -97,15 +96,14 @@
             filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.3));
         }
 
-        /* 💡 AUMENTO DE VISIBILIDAD: Aumento el tamaño de fuente y/o el grosor */
+        /* 💡 AUMENTO DE VISIBILIDAD: Hacemos el texto de introducción más grande y lo forzamos a negro. */
         .intro-text {
-            /* Antes: 1.3rem */
-            font-size: 1.4rem; /* Un poco más grande */
-            color: #555;
+            font-size: 1.4rem; 
+            color: #000; /* Negro puro */
             margin-bottom: 2.5rem;
             max-width: 600px;
             margin-inline: auto;
-            font-weight: 700; /* Lo hago más grueso (negrita) */
+            font-weight: 700;
         }
 
         .services-grid {
@@ -126,12 +124,12 @@
 
         .service-item-emoji { font-size: 2.3rem; }
         
-        /* 💡 AUMENTO DE VISIBILIDAD: Aumento el tamaño de fuente y el peso de los títulos de los servicios */
+        /* 💡 AUMENTO DE VISIBILIDAD: Hacemos los títulos de los servicios más grandes, más oscuros y en negrita. */
         .service-item h3 { 
             margin-top: 0.7rem; 
-            /* Antes: 1em (por defecto) */
-            font-size: 1.15rem; /* Un poco más grande */
-            font-weight: 700; /* Más oscuro / Negrita */
+            font-size: 1.2rem; /* Más grande que 1.15rem */
+            font-weight: 800; /* Más grueso */
+            color: #000; /* Negro puro */
         }
 
         .contact {
@@ -141,26 +139,30 @@
             border-radius: 8px;
         }
 
+        /* 💡 AUMENTO DE VISIBILIDAD: Hacemos el título de contacto más oscuro */
         .contact h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
+            color: #000; /* Negro puro */
         }
 
-        /* 💡 AUMENTO DE VISIBILIDAD: Aumento el tamaño del número de teléfono */
+        /* 💡 AUMENTO DE VISIBILIDAD: Hacemos el texto normal de contacto más grande y oscuro */
+        .contact p {
+            font-size: 1.1rem; /* Un poco más grande */
+            color: #000; /* Negro puro */
+            font-weight: 700;
+        }
+
+        /* 💡 AUMENTO DE VISIBILIDAD: El número de teléfono, más grande y más grueso */
         .phone-number {
-            /* Antes: 1.7rem */
-            font-size: 2rem; /* Significativamente más grande */
-            font-weight: 900; /* Aún más grueso que 700 */
-        }
-
-        /* 💡 AUMENTO DE VISIBILIDAD: Hago el texto normal (cuerpo) un poco más oscuro y más grande */
-        .contact p, .service-item p { 
-            /* Para asegurar que el texto normal sea más visible */
-            color: #111; /* Color casi negro */
-            font-size: 1.05rem; /* Un poco más grande */
+            font-size: 2.1rem; /* Un poco más grande */
+            font-weight: 900; 
+            color: #000; /* Negro puro */
         }
 
         .buttons-section { margin-top: 2rem; }
+        
+        /* 💡 AUMENTO DE VISIBILIDAD: El texto del botón, más grande y más grueso */
         .cta-button {
             background: #333;
             color: #fff;
@@ -168,7 +170,9 @@
             border-radius: 50px;
             border: none;
             cursor: pointer;
-            font-weight: bold;
+            /* Antes era 'bold', lo hacemos explícitamente más grande */
+            font-weight: 900; /* Más grueso */
+            font-size: 1.1rem; /* Más grande */
             margin: 0.5rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
