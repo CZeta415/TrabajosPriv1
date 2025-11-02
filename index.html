@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alquiler de Vajilla para Eventos ✨</title>
 
-    <!-- ✅ Fuentes con display=block para html2canvas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=block" 
         rel="stylesheet">
 
-    <!-- Librería html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <style>
@@ -99,12 +97,15 @@
             filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.3));
         }
 
+        /* 💡 AUMENTO DE VISIBILIDAD: Aumento el tamaño de fuente y/o el grosor */
         .intro-text {
-            font-size: 1.3rem;
+            /* Antes: 1.3rem */
+            font-size: 1.4rem; /* Un poco más grande */
             color: #555;
             margin-bottom: 2.5rem;
             max-width: 600px;
             margin-inline: auto;
+            font-weight: 700; /* Lo hago más grueso (negrita) */
         }
 
         .services-grid {
@@ -124,7 +125,14 @@
         }
 
         .service-item-emoji { font-size: 2.3rem; }
-        .service-item h3 { margin-top: 0.7rem; }
+        
+        /* 💡 AUMENTO DE VISIBILIDAD: Aumento el tamaño de fuente y el peso de los títulos de los servicios */
+        .service-item h3 { 
+            margin-top: 0.7rem; 
+            /* Antes: 1em (por defecto) */
+            font-size: 1.15rem; /* Un poco más grande */
+            font-weight: 700; /* Más oscuro / Negrita */
+        }
 
         .contact {
             background-color: #fffaf0;
@@ -138,9 +146,18 @@
             font-size: 2.2rem;
         }
 
+        /* 💡 AUMENTO DE VISIBILIDAD: Aumento el tamaño del número de teléfono */
         .phone-number {
-            font-size: 1.7rem;
-            font-weight: 700;
+            /* Antes: 1.7rem */
+            font-size: 2rem; /* Significativamente más grande */
+            font-weight: 900; /* Aún más grueso que 700 */
+        }
+
+        /* 💡 AUMENTO DE VISIBILIDAD: Hago el texto normal (cuerpo) un poco más oscuro y más grande */
+        .contact p, .service-item p { 
+            /* Para asegurar que el texto normal sea más visible */
+            color: #111; /* Color casi negro */
+            font-size: 1.05rem; /* Un poco más grande */
         }
 
         .buttons-section { margin-top: 2rem; }
@@ -178,18 +195,18 @@
     <main id="flyer-container">
         <div class="featured-image-container">
             <img src="platoss.jpg" alt="Platos" class="featured-image" crossorigin="anonymous">
-            <img src="copa1.png" alt="Copa" class="copa-superpuesta" crossorigin="anonymous">
+            <img src="copa.png" alt="Copa" class="copa-superpuesta" crossorigin="anonymous">
         </div>
 
         <p class="intro-text">Ofrecemos todo lo necesario para que tu mesa luzca impecable y sofisticada.</p>
 
         <ul class="services-grid">
-            <li class="service-item"><div class="service-item-emoji">🍸</div><h3>Copas</h3></li>
-            <li class="service-item"><div class="service-item-emoji">🍽️</div><h3>Platos</h3></li>
-            <li class="service-item"><div class="service-item-emoji">🍴</div><h3>Cubiertos</h3></li>
-            <li class="service-item"><div class="service-item-emoji">⚜️</div><h3>Manteles</h3></li>
-            <li class="service-item"><div class="service-item-emoji">🎗️</div><h3>Caminos de Mesas</h3></li>
-            <li class="service-item"><div class="service-item-emoji">🤵</div><h3>Bandejas para Mozo</h3></li>
+            <li class="service-item"><div class="service-item-emoji">🍸</div><h3>Copas</h3><p>Para todo tipo de bebidas.</p></li>
+            <li class="service-item"><div class="service-item-emoji">🍽️</div><h3>Platos</h3><p>Platos principales y de postre.</p></li>
+            <li class="service-item"><div class="service-item-emoji">🍴</div><h3>Cubiertos</h3><p>Juegos completos y elegantes.</p></li>
+            <li class="service-item"><div class="service-item-emoji">⚜️</div><h3>Manteles</h3><p>Variedad de colores y texturas.</p></li>
+            <li class="service-item"><div class="service-item-emoji">🎗️</div><h3>Caminos de Mesas</h3><p>Detalles decorativos.</p></li>
+            <li class="service-item"><div class="service-item-emoji">🤵</div><h3>Bandejas para Mozo</h3><p>Servicio profesional.</p></li>
         </ul>
 
         <section class="contact">
